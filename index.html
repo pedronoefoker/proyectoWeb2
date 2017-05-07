@@ -1,24 +1,23 @@
  <!DOCTYPE html>
-  <html lang="es">
+  <html lang="es" ng-app="myApp">
     <head>
      <title>Cursos</title>
     <meta charset="UTF-8">
 
-      <!--Import Google Icon Font-->
+      
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
+      
       <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-        <script src="js/materialize.min.js" type="text/javascript" charset="utf-8" async defer></script>
-       <script src="js/jquery.js" type="text/javascript" charset="utf-8" async defer></script>
+        <script src="js/materialize.min.js"></script>
+       <script src="js/jquery.js" ></script>
+      <script src="js/angular.js" ></script>
 
-
-      <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
+    <body ng-controller="cursoCtrl as curso">
    	
    	<style>
 
@@ -69,7 +68,7 @@
       <a href="#" data-activates="mobile-demo" class="button-collapse " style="color:#0097a7 ;" ><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><label class="label-icon" for="search"><i class="material-icons" style ="color: black;">search</i></label></li>
-        <li><input id="search" type="search" style ="color: black;"></li>
+        <li><input placeholder="Nombre del curso" ng-model="search" style ="color: black;"></li>
         <li><a style="color:#0097a7 ;" href="index.html">Curos</a></li>
         <li><a style="color:#0097a7 ;" href="Convocatoria.html">Convocatoria</a></li>
         <li><a class="dropdown-button" href="#!" data-activates="Accesos2" style="color:#0097a7 ;">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -93,7 +92,7 @@
 
   <div class="row">
     
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Java | filter: search" >
 
 
       <div class="card" style="opacity:0.7;" >  
@@ -120,7 +119,7 @@
     </div>
 
    
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Python | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -147,7 +146,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Ruby | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -174,7 +173,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.C1 | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -201,7 +200,7 @@
     </div>
 
     <div class="row">
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Android | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -228,7 +227,7 @@
     </div>
 
    
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Arduino | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -255,7 +254,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Linux | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -282,7 +281,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Redes | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -326,7 +325,7 @@
     <div class="parallax"><img src="img/coning2.jpg" style="width: 100%"></div>
 
   <div class="row">
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Java | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -353,7 +352,7 @@
     </div>
 
    
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Python | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -380,7 +379,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Ruby | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -407,7 +406,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.C1 | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -435,7 +434,7 @@
   </div>
 
   <div class="row">
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Android | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -462,7 +461,7 @@
     </div>
 
    
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Arduino | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -489,7 +488,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Linux | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -516,7 +515,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Redes | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -555,7 +554,7 @@
 
           
             <div class="row">
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Java | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -582,7 +581,7 @@
     </div>
 
    
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Python | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -609,7 +608,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Ruby | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -636,7 +635,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.C1 | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -664,7 +663,7 @@
   </div>
 
   <div class="row">
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Android | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -691,7 +690,7 @@
     </div>
 
    
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Arduino | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -718,7 +717,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Linux | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -745,7 +744,7 @@
     </div>
 
 
-    <div class="col s3 m3">
+    <div class="col s3 m3" ng-repeat="n in curso.Redes | filter: search">
 
 
       <div class="card" style="opacity:0.6;">  
@@ -821,6 +820,7 @@
   $(".button-collapse").sideNav();
   
 </script>
+<script src="js/app.js"></script>
 
     </body>
   </html>
