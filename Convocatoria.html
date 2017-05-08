@@ -11,6 +11,7 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+       <script src="js/main.js"></script>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -42,7 +43,7 @@
 
 <main>
 	<ul id="Accesos" class="dropdown-content" style="color:#0097a7 ;">
-	  <li><a href="#!">Facebook</a></li>
+	  <li><a id="login" href="#!">Facebook</a></li>
 	  <li><a href="#!">Tweeter</a></li>
 	  <li><a href="#!">GitHub</a></li>
 	  <li><a href="#!">Google</a></li>
@@ -51,7 +52,7 @@
 	  <li><a href="#!">Linkedin</a></li>
 	</ul>
 	<ul id="Accesos2" class="dropdown-content" style="color:#0097a7 ;">
-	  <li><a href="#!">Facebook</a></li>
+	  <li><a id="login" href="#!">Facebook</a></li>
 	  <li><a href="#!">Tweeter</a></li>
 	  <li><a href="#!">GitHub</a></li>
 	  <li><a href="#!">Google</a></li>
@@ -225,6 +226,15 @@
      $(document).ready(function(){
       $('.carousel').carousel();
     });
+</script>
+<script>
+	(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 </script>
 
 

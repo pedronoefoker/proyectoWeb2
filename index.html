@@ -13,6 +13,7 @@
         <script src="js/materialize.min.js"></script>
        <script src="js/jquery.js" ></script>
       <script src="js/angular.js" ></script>
+      <script src="js/main.js"></script>
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -45,7 +46,7 @@
 
   <ul id="Accesos" class="dropdown-content" style="color:#0097a7 ;">
   <li><a href="#!">Facebook</a></li>
-  <li><a href="#!">Tweeter</a></li>
+  <li><a href="#!">Twiter</a></li>
   <li><a href="#!">GitHub</a></li>
   <li><a href="#!">Google</a></li>
   <li><a href="#!">Yammer</a></li>
@@ -53,8 +54,8 @@
   <li><a href="#!">Linkedin</a></li>
 </ul>
 <ul id="Accesos2" class="dropdown-content" style="color:#0097a7 ;">
-  <li><a href="#!">Facebook</a></li>
-  <li><a href="#!">Tweeter</a></li>
+  <li><a id="login" href="bienvenida.html">Facebook</a></li>
+  <li><a href="#!">Twiter</a></li>
   <li><a href="#!">GitHub</a></li>
   <li><a href="#!">Google</a></li>
   <li><a href="#!">Yammer</a></li>
@@ -821,6 +822,16 @@
   
 </script>
 <script src="js/app.js"></script>
+<script>
+  // Load the SDK asynchronously
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+   </script>
 
     </body>
   </html>
