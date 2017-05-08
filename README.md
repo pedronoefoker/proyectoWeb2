@@ -1,3 +1,5 @@
 # proyectoWeb2
-Este git contiene un pequeño diseño de como visualizamos la pagina web 
-de proteco utilizando diversos elementos de materialize :3
+Diseño de como se visualizaría la página web de Proteco con Materialize.
+Recuerda descargar todas las carpetas para que el proyecto funcione correctamente.
+Link de la página en internet: http://protecoproyectoweb2pedroorlando.esy.es
+
