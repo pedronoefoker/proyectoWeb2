@@ -790,6 +790,7 @@
  	
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!--<script type="text/javascript" src="js/app.js"></script>-->
 
 <script>
@@ -802,7 +803,8 @@
 <script src="js/app.js"></script>
 <script>
   // Load the SDK asynchronously
-    (function(d, s, id) {
+    (function(d, s, id) 
+    {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -810,6 +812,5 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
    </script>
-
     </body>
   </html>
